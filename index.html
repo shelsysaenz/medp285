@@ -2,6 +2,7 @@
 <html lang= "en">
 <head>
 	<meta charset= "utf-8">
+	<link rel="stylesheet" href="style.css">
 	<title> MEDP 285 Homepage</title>
 	<meta name = "viewport"  content= "width=device-width, initial -scale=1">
 	<meta name= "descritpion" content= " Fn summer class during miss rona"/>
@@ -10,23 +11,30 @@
  </head>
 
 
-<body>
+<body style="background-color:seashell;" >
 	<!--h1> Wlecome to my homepage for the soomer</h1>
 	<p> something here</p-->
 		<!-- navigation-->
+		<font face = "Verdana">
 		<nav id ="nav">
 
-			<ul><!-- this is out menu hunny, unordered list, hashtag means linked in page>? internal link, a means anchor-->
-				<li><a href="#ETgohome"> Home</a></li>
-				<li><a href="#projects"> Projects </a></li>
-				<li><a href="#about"> About</a></li>
+			<ul class="box" ><!-- this is out menu hunny, unordered list, hashtag means linked in page>? internal link, a means anchor-->
+				<li class="lista" ><a href="#ETgohome" style="text-decoration:none"> Home</a></li>
+				<li class="lista"><a href="#projects" style="text-decoration:none"> Projects </a></li>
+				<li class="lista"><a href="#about" style="text-decoration:none"> About</a></li>
 
-				<li><a href="#news"> News</a></li>
-				<li><a href="#contact"> Contact</a></li>
+				<li class="lista"><a href="#news" style="text-decoration:none"> News</a></li>
+				<li class="lista"><a href="#contact" style="text-decoration:none"> Contact</a></li>
 			</ul>
 		</nav>
 
 		<header id="ETgohome">
+			<picture>
+        <source media="(min-width:1280px)" srcset= "img/hw1280.jpg" class= "center"/>
+        <source media="(min-width:960px)" srcset= "img/hw960.jpg" class= "center"/>
+        <source media="(min-width:480px)" srcset= "img/hw480.jpg" class= "center"/>
+        <img src="img/hw480.jpg" alt= " an interavtive art installation.." class= "center"/>
+      </picture>
 			<h1> MEDP 285 HOMEPAGE</h1>
 		</header>
 
