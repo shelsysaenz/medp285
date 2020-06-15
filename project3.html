@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initital-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    <title>CSS Positions</title>
+    <style>
+    * { box-sizing: border-box; }
+    body {
+  background-color: seashell;
+  background-image: url(img/leaves.jpg);
+   background-size: 1000px;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+    .boxLeft {
+      margin: 15px;
+      padding: 20px 10px 20px 15px;
+      border: 4px solid #999;
+      background-color: #B1E3A9;
+      width: 300px;
+      float: left;
+    }
+    .boxRight {
+      margin: 15px;
+      padding: 20px 10px 20px 15px;
+      border: 4px solid #999;
+      background-color: #A9B0E3;
+      width: 350px;
+      float: right;
+    }
+    .boxClear {
+      margin: 15px;
+      padding: 20px 20px 20px 20px;
+      border: 4px solid #999;
+      background-color: #E09473;
+      width: 350px;
+      clear: both;
+    }
+    .boxClear2 {
+      margin: 15px;
+      padding: 20px 20px 20px 20px;
+      border: 4px solid #999;
+      background-color: #3A647F   ;
+      width: 400px;
+      clear: both;
+    }
+    .boxAbsolute {
+      margin: 15px;
+      padding: 20px 10px 20px 15px;
+      border: 4px solid #999;
+      background-color: #84C6DD;
+      width: 300px;
+      position: absolute;
+      top: 1200px;
+      left: 600px;
+    }
+    .boxAbsolute2 {
+      margin: 15px;
+      padding: 20px 10px 20px 15px;
+      border: 4px solid #999;
+      background-color: #176C16    ;
+      width: 470px;
+      position: absolute;
+      top: 1500px;
+      right: 700px;
+    }
+    .boxAbsolute3 {
+      margin: 15px;
+      padding: 20px 10px 20px 15px;
+      border: 4px solid #999;
+      background-color: white   ;
+      width: 300px;
+      position: absolute;
+      top: 800px;
+      left: 900px;
+    }
+    .boxFixed {
+      margin: auto;/*15px;
+      padding: 20px 10px 20px 15px;*/
+      border: 1px solid #999;
+      background-color: #EED189;
+      width: 200px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+    .boxSticky {
+      margin: 15px;
+      padding: 20px 10px 20px 15px;*/
+      border: 1px solid #999;
+      background-color: #CE6948;
+      width: 600px;
+      position: sticky;
+      top: 0px;
+      z-index: 20;
+    }
+    </style>
+  </head>
+
+  <body>
+
+     <audio controls>
+  
+  <source src="video/ocean.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+    <div class="boxLeft">
+      
+        <img src="img/bunny.jpg" alt="a dog dressed like a bunny" height="400">
+
+      
+    </div>
+
+    <div class="boxAbsolute2">
+     
+      <img src="img/coco.jpg" alt="coco running">
+
+    </div>
+
+    <div class="boxRight">
+      <video controls loop poster="sometime.jpg" width="300">
+
+              <source src="video/mirror.mp4" type="video/mp4" />
+
+
+              <track src="video/mirroEN.vtt" kind="captions" srclang="en" default />
+              <!-- Fallback for borwsers that don't support video tag -->
+              <a href="video/mirror.mp4" download>Download MP4</a>
+              </video>
+    </div>
+    <div class="boxClear">
+      <p style="font-size:40px"> 
+        Coco'c Collage</p>
+    </div>
+   
+    
+    <div class="boxAbsolute">
+      
+      <img src="img/cocopuffs.gif" alt="coco wagging her tail heehee">
+
+    </div>
+
+    <div class="boxClear2">
+      <p style="color:white">
+        Coco is my dog. Shes a year old!! Thats kinda it. Enjoy :)
+      </p>
+    </div>
+
+
+    <div class="boxSticky">
+       <video controls loop poster="img/santa.jpg" width="500">
+
+              <source src="video/hit.mp4" type="video/mp4" />
+
+
+              
+              <!-- Fallback for borwsers that don't support video tag -->
+              <a href="video/hit.mp4" download>Download MP4</a>
+              </video>
+     
+    </div>
+     <div class="boxAbsolute3">
+      
+      <img src="img/swing.jpg" alt="coco on a swing" height="300">
+
+    </div>
+   
+    <div class="boxFixed">
+      
+     <p style="color:white"><a href="index.html">Back to the Homepage  </a></p>
+
+    </div>
+  </body>
+   
+  </html>

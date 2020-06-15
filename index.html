@@ -7,9 +7,55 @@
 	<meta name = "viewport"  content= "width=device-width, initial -scale=1">
 	<meta name= "descritpion" content= " Fn summer class during miss rona"/>
 	<meta name="author" content= "its me"/>
-
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+<link rel="manifest" href="icon/site.webmanifest">
  </head>
+ <script>
+ var previousScroll = 0;
 
+     $(window).scroll(function(){
+
+       var currentScroll = $(this).scrollTop();
+
+       if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
+
+         if (currentScroll > previousScroll){
+           window.setTimeout(hideNav, 300);
+
+         } else if (currentScroll == previousScroll) {
+           window.setTimeout(visibleNav, 300);
+         }
+          else {
+           window.setTimeout(showNav, 300);
+         }
+
+         previousScroll = currentScroll;
+       }
+
+       /* make the scroll navigation disappear when it is scrolled on top */
+
+       if ($(window).scrollTop() <= 150) {
+           $('#navigation-scroll').css('display', 'none');
+       } else {
+         $('#navigation-scroll').css('display', 'flex');
+       }
+
+     });
+
+     function hideNav() {
+       $(".main-navigation-scroll").removeClass("is-visible").addClass("is-hidden");
+     }
+     function showNav() {
+       $(".main-navigation-scroll").removeClass("is-hidden").addClass("is-visible");
+       $(".main-navigation-scroll").addClass("shadow");
+     }
+
+   });
+</script>
 
 <body >
 	<!--h1> Wlecome to my homepage for the soomer</h1>
@@ -36,7 +82,7 @@
         		<img src="img/hw480.jpg" alt= " an interavtive art installation.." class= "center"/>
         	</picture>
 
-			<h1 class="title"> medp 285 homepage</h1>
+			<h1 class="title"> MEDP 285 Homepage</h1>
 		</header>
 
 		<hr />
@@ -44,11 +90,11 @@
 
 
 		<section id="projects">
-			<h1> projects </h1>
+			<h1> PROJECTS </h1>
 			<ol>
-				<li> project 1: <p><a href= "slideshow.html"> blm slideshow </a></p>
-					<p><a href= "erics.html"> eric's slideshow </a></p> </li>
-					<li> project 2: Video</li>
+				<li> Project 1: <p><a href= "slideshow.html"> BLM Slideshow </a></p>
+					<p><a href= "erics.html"> Eric's Slideshow </a></p> </li>
+				<li> Project 2: Video</li>
 					<video controls loop poster="sometime.jpg" width="300">
 
         			<source src="video/boo.mp4" type="video/mp4" />
@@ -58,6 +104,13 @@
         			<!-- Fallback for borwsers that don't support video tag -->
         			<a href="video/boo.mp4" download>Download MP4</a>
       				</video>
+      			<li> Project 3: 
+      				<p> ~Icon works on chrome~</p>
+      				<p><a href= "project3.html"> Layered Collage</a></p>
+      				<p><a href= "layoutTemplate.html"> Edited CSS Blog </a></p>
+
+
+      			</li>
 
 			</ol>
 
@@ -73,11 +126,12 @@
 
 
 		<footer id="contact">
-			<p> contact</p>
+			<h1> CONTACT</h>
 			<p>
-				<a href="mailto:shelsy.saenz76@myhunter.cuny.edu"> my email</a>
+				<a href="mailto:shelsy.saenz76@myhunter.cuny.edu"> My Email</a>
 				<br/>
 				<a href="#nav"> top</a>
+			</footer>
 
 
 

@@ -1,0 +1,83 @@
+*{ box-sizing: border-box; }
+body {
+  background-color: #3B6978;
+  
+  background-image: url("img/waves.jpg");
+  background-size: 50 px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  /*
+  left top;
+  left bottom;
+  right top;
+  right center;
+  right bottom;
+  center top;
+  center center;
+  center bottom;
+  */
+  font-family: 'Lora', serif;
+}
+#container {
+  max-width: 90%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+ 
+  background-color: #E5DFDF;
+  border: 2px solid white;
+  border-top: 0;
+  line-height: 1.5;
+}
+header {
+  padding: .5em;
+  background-color: #84A9AC;
+  
+
+  border-bottom: 2px solid white;
+  background-image: url(img/pattern.jpg);
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.5em;
+}
+nav {
+  float: left;
+  width: 20%;
+  border: 0px solid white;
+  margin: 0;
+  padding: 1em;
+
+}
+
+
+main {
+  float: left;
+  width: 65%;
+  border: 1px solid white;
+  padding: 2em;
+  text-align: justify;
+
+}
+aside {
+  float: right;
+
+  width: 10%;
+  border: 1px solid white;
+  margin: 0;
+  padding: 1em;
+}
+footer {
+  clear: both;
+  margin: 0;
+  padding: .5em;
+  color: black;
+    background-image: url("img/waves.jpg");
+  background-size: 50 px;
+
+  background-color: #84A9AC;
+  border-top: 1px solid gray;
+}
