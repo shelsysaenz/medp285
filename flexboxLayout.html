@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #f1f1f1;
+    padding: 15px;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* Container for flexboxes */
+main {
+    
+    
+  grid-row-start: 3;
+  grid-row-end: auto;
+  grid-column-start: 1;
+  grid-column-end: 1/4;
+  text-align:center;
+}
+
+.girlidk {
+  height: 100px;
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20em;
+}
+.man {
+  height: 100px;
+  margin: 2em;
+  display: flex;
+  justify-content: center;
+}
+/* Create equal columns that sits next to each other */
+.column {
+    flex: 1;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    margin:.5em;
+    
+}
+.box {
+    flex: 1;
+    padding: 2px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    margin:.5em;
+    
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    main {
+      flex-direction: column; /* or row */
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+  <h1>grid hw </h1>
+
+
+<main>
+  <div class= "girlidk">
+    <div class="column" style="background-color:yellow;"> <img src="img/interior1.jpg" alt="a room" height= "200"> </div>
+    <div class="column" style="background-color:orange;"><img src="img/interior2.jpg" alt="a place" height= "200"></div>
+    <div class="column" style="background-color:pink;"><img src="img/interior3.jpg" alt="a space" height= "200"></div>
+     <div class="column" style="background-color:red;"><img src="img/interior4.jpg" alt="ugh" height= "200"></div>
+    
+    
+  </div>
+
+<h2></h2>
+  <div class= "man">
+    <div class="box" > <img src="img/summer1.jpg" alt="kids playin with ope fire hyrdrant" height= "300"></div>
+    <div class="box"> <img src="img/summer2.jpg" alt="coquito" height= "300"> </div>
+    <div class="box"> <img src="img/summer3.jpg" alt="pffft a joke" height= "300"> </div>
+    
+    
+  </div>
+</main>
+
+
+</body>
+</html>
