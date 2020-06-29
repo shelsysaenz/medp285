@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Madlibs</title>
+    <meta name="viewport" content="width=device-width">
+    <noscript>
+      <style type="text/css">
+        #main {display:none;}
+      </style>
+      <div class="noscriptmsg">
+        This page requires JavaScript to be enabled.
+      </div>
+    </noscript>
+
+    <style>
+	  body { font-family:Arial, Helvetica, sans-serif; }
+	  #main { width: 980px; float: center;}
+
+	  #storyForm { width: 470px; float: left; }
+	  li { line-height: 1.6em; }
+
+	  #writeLib { width: 470px; float: left; padding: 0 10px 0 15px; }
+
+	  /* With the @keyframes rule, you can create animations.
+	  http://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp */
+	  @keyframes fade-in  {
+		  0% {
+			  opacity: 0;
+			  }
+		  100% {
+			  opacity: 1;
+			  }
+		}
+
+	  .fade-in {
+		  animation-name: fade-in;
+		  animation-duration: 3s;
+		  animation-timing-function: ease-in;
+		  animation-iteration-count: 1;
+		}
+	</style>
+
+    <script>
+	  //create a function to assemble the story
+      function makeLibs() {
+		  var story = "<h2 class='fade-in'>Zombie Apocalypse</h2><p class='fade-in'> Theres been talk about a new virus going around, making people " +
+		  document.madlibs.input1.value + ". " +
+		  "  Hospitals are full. It’s been all over the news. It’s the only thing you hear about at " +
+		  document.madlibs.input2.value + " all day. " + "You’re " +
+		  document.madlibs.input3.value +
+		  " back home. There’s so much traffic. You hear sirens and ambulances. You get home and fall asleep on the " +
+		  document.madlibs.input4.value +
+		  " while the TV is on. Its " +
+      document.madlibs.input5.value +
+      " The emergency alarm on the tv wakes you. You’re " +
+      document.madlibs.input6.value + " and drink  "+
+      document.madlibs.input7.value + ". The news people are calling it the "+
+      document.madlibs.input1.value + " virus.You hear screaming and knocking on your door. Its your neighbor. She’s crying and covered in blood. Before you can process anything her "+ 
+      document.madlibs.input8.value + " tackles her and violently bites her. They killed her. You’re next" +".</span></p>";
+		  //write the story to a div in the page
+		  document.getElementById("writeLib").innerHTML=story;
+		}
+    </script>
+
+  </head>
+
+  <body>
+    <div id="main">
+      <form name="madlibs" id="storyForm">
+        <fieldset> <!--Used to logically group sections of a form-->
+
+          <legend>Help Generate a Story</legend> <!--Used to add captions to a fieldset-->
+          <ul>
+          <li>
+          <label for="firstadj">Adj:<em>*</em> <input type="text" name="input1" placeholder="First Adj" size="30" required /></label>
+          </li>
+          
+          <li>
+          <label for="place">Place:<em>*</em> <input type="text" name="input2" placeholder="First place" size="30" required /></label>
+          </li>
+
+          <li>
+          <label for="verb">Present participles (ex-swimming) :<em>*</em> <input type="text" name="input3" placeholder="Verb" size="30" required /></label>
+          </li>
+
+
+          <li>
+          <label for="furn">A piece of furniture:<em>*</em> <input type="text" name="input4" placeholder=" a piece of furniture" size="30" required /></label>
+          </li>
+
+          <li>
+          <label for="time">Select a time:<em>*</em> <select name="input5" required> <option value="8 pm ">8 pm.</option> <option selected="selected" value="12 am ">12 am.</option> <option value="2 am">2 am.</option> <option value="4 am.">4 am.</option> </select></label>
+          </li>
+
+          <li>
+           <label for="secondadj">Adj:<em>*</em> <input type="text" name="input6" placeholder="Second Adj" size="30" required /></label>
+          </li>
+
+          <li>
+           <label for="liquid">A liquid:<em>*</em> <input type="text" name="input7" placeholder="a liquid" size="30" required /></label>
+          </li>  
+          <li>
+           <label for="family member">A family member:<em>*</em> <input type="text" name="input8" placeholder="a family member" size="30" required /></label>
+          </li>
+
+        </ul>
+        </fieldset>
+
+        <p>
+        <!-- This button runs the function that compiles the story -->
+        <input type="button" value="Create Story" onClick ="makeLibs()">
+        <input type="reset">
+      </p>
+    </form>
+
+
+      <div id="writeLib"></div>
+    </div>
+
+  </body>
+</html>
